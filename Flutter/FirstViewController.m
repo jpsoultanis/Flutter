@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface FirstViewController ()
 
@@ -16,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    FBLoginView *loginView = [[FBLoginView alloc] init];
+    loginView.center = self.view.center;
+    [self.view addSubview:loginView];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
